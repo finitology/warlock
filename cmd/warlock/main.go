@@ -67,7 +67,7 @@ func main() {
     }
 
     // Attach to interface (replace "eth0" with yours)
-    ifaceName := "enp7s0"
+    ifaceName := "wlp0s20f3"
     iface, err := net.InterfaceByName(ifaceName)
     if err != nil {
         log.Fatalf("getting interface %s: %v", ifaceName, err)
