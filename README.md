@@ -8,31 +8,6 @@ SPA is a method where access to services is controlled by requiring a special, c
 
 # High-Level Architecture
 
-+--------------------------+
-|       User Sends SPA     |
-|   (UDP packet + HMAC)    |
-+------------+-------------+
-             |
-             v
-+--------------------------+
-|  eBPF Packet Filter      |
-| (hooked via XDP/TC)      |
-|  - Check for UDP packet  |
-|  - Check SPA port        |
-|  - Pass to daemon        |
-+------------+-------------+
-             |
-             v
-+--------------------------+
-|     Go Daemon            |
-|  - Validates HMAC        |
-|  - Updates firewall rules|
-+------------+-------------+
-             |
-             v
-+--------------------------+
-|  Allow TCP 8080          |
-+--------------------------+
 
 # Components
 
